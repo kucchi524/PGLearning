@@ -46,3 +46,38 @@ matsuda_avg = calc_average(matsuda_scores)
 
 output_result('浅木', asagi_avg)
 output_result('松田', matsuda_avg)
+
+def eat(breakfast, lunch, dinner='カレー'):
+    print(f'朝は{breakfast}を食べました')
+    print(f'昼は{lunch}を食べました')
+    print(f'夜は{dinner}を食べました')
+    
+print('8/1')
+eat('トースト', 'おにぎり')
+print('8/2')
+eat('納豆ご飯', 'ラーメン')
+print('8/3')
+eat('ばなな', 'そば', '焼肉')
+print('8/4')
+eat('サンドウィッチ', 'シュウマイ弁当')
+
+def eat2(breakfast, lunch, dinner='カレー', *desserts):
+    print(f'朝は{breakfast}を食べました')
+    print(f'昼は{lunch}を食べました')
+    print(f'夜は{dinner}を食べました')
+    for d in desserts:
+        print(f'おやつに{d}を食べました')
+
+eat2('家系ラーメン', '二郎系ラーメン', '長浜ラーメン', 'パフェ', 'ケーキ', 'アイス')
+
+name = '松田'
+def change_name():
+    global name
+    name = '浅木'
+    
+def hello():
+    print('こんにちは' + name + 'さん')
+    
+change_name()
+hello()
+

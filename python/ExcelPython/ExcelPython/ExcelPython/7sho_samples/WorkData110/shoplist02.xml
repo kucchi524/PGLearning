@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<shops>
+	<shop code="3">
+		<name>新宿店</name>
+		<place>東京都新宿区</place>
+		<manager>伊藤栄一</manager>
+	</shop>
+	<shop code="4">
+		<name>池袋店</name>
+		<place>東京都豊島区</place>
+		<manager>山田博美</manager>
+	</shop>
+	<shop code="7">
+		<name>吉祥寺店</name>
+		<place>東京都武蔵野市</place>
+		<manager>西川武弘</manager>
+	</shop>
+	<shop code="8">
+		<name>横浜店</name>
+		<place>横浜市中区</place>
+		<manager>水谷春香</manager>
+	</shop>
+	<shop code="10">
+		<name>大宮店</name>
+		<place>さいたま市大宮区</place>
+		<manager>竹内直樹</manager>
+	</shop>
+</shops>

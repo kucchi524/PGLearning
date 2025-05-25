@@ -149,3 +149,275 @@ java.lang.Exception: '.org.eclipse.egit.core.cmp' のプロジェクト記述フ
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+!SESSION 2025-05-25 19:33:18.850 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-05-25 19:33:36.145
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 19:37:12.639
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration)
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 19:37:12.644
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 19:37:12.680
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 19:37:22.416
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-05-25 19:37:37.204
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:753)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:671)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:663)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.lambda$0(LSJavaHoverProvider.java:63)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 20:06:41.272
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 20:09:02.243
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 20:10:33.883
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 20:33:20.141
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-05-25 20:33:34.929
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:753)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:671)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:663)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.lambda$0(LSJavaHoverProvider.java:63)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 20:33:50.546
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-25 20:39:23.860
+!MESSAGE 内部エラーが発生しました: "追加情報の計算"。
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class lombok.launch.PatchFixesHider$Javadoc
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:93)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:78)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:63)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:583)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodException: lombok.eclipse.agent.PatchJavadoc.printMethod(org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration,java.lang.Integer,java.lang.StringBuilder,org.eclipse.jdt.internal.compiler.ast.TypeDeclaration) [in thread "Worker-3: 追加情報の計算"]
+	at java.base/java.lang.Class.getDeclaredMethod(Class.java:2675)
+	at lombok.launch.PatchFixesHider$Util.findMethod(PatchFixesHider.java:120)
+	at lombok.launch.PatchFixesHider$Javadoc.<clinit>(PatchFixesHider.java:437)
+	... 7 more
+!SESSION 2025-05-25 20:41:14.746 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -clean
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-05-25 20:41:21.010
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+!SESSION 2025-05-25 20:44:55.541 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2025-05-25 20:44:56.625
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'

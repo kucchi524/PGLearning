@@ -72,3 +72,32 @@ for (let i = 0; i < 3; i++) {
   var result = triangle(width, height)
   console.log('%dつ目の三角形の面積：%d', i + 1, result)
 }
+
+var result = (function (width, height) {
+  return (width * height) / 2
+})(10, 8)
+console.log('三角形の面積: %d', triangle)
+
+var outFunction = function () {
+  var num = 1
+  return function () {
+    console.log(num)
+    num = num + 10
+  }
+}
+var callFunction = outFunction()
+for (let i = 0; i < 3; i++) {
+  callFunction()
+}
+
+function tax(price) {
+  return price * 1.1
+}
+console.log(tax(100))
+console.log(tax(500))
+console.log(tax(1500))
+
+var daikei = function (joutei, katei, height) {
+  return ((joutei + katei) * height) / 2
+}
+console.log(daikei(10, 8, 4))

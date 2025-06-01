@@ -34,3 +34,13 @@ for row in ws4.iter_rows():
         result = re.match('(.{3})本店', str(cel.value))
         if result:
             print(cel.coordinate, result.group(1), sep=':')
+            
+wb5 = openpyxl.load_workbook('C:\\PG練習\\python\\ExcelPython\\3\\3sho_samples\\販売記録01.xlsx')
+ws5 = wb5.active
+for row in ws5.insert_rows(min_row=4, max_row=8, max_col=5):
+    sval = row[0].value
+    if sval.endwith('本店'):
+        vals = []
+        for cel in row:
+            vals.append(cel.value)
+        print(vals)

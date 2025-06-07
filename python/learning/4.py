@@ -1,9 +1,11 @@
 a = []
-
+b = 0
 for i in range(2):
-    b = int(input('入力してください >>'))
-    a.append(b)
+    a.append(int(input('入力してください >>')))
     
-print(a[0])
-print(a[1])
-print(a[0] + a[1])
+print(len(a))
+
+for j in range(len(a)):
+    b = b + a[j]
+    
+print(b)

@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="learning2.RandomGenerator"/>
+    <fullyQualifiedTypeName name="learning2.EvenNumberExtractor"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="learning2.CalculateTotal"/>
 </qualifiedTypeNameHistroy>

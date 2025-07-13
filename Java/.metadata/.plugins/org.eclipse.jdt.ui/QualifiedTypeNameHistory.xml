@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="learning2.EvenNumberExtractor"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="learning2.CalculateTotal"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

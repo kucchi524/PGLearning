@@ -1,10 +1,11 @@
 import time
 import os
+import shutil
 from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from datetime import datetime
 from env import LOGIN_URL, OBC_ID, PASSWORD, D_PATH
 
 def setup_download_preferences():
@@ -34,6 +35,7 @@ def setup_download_preferences():
     options.add_experimental_option('useAutomationExtension', False)
     
     driver = wd.Chrome(options=options)
+    driver.maximize_window()
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     
     return driver, download_path
@@ -120,15 +122,9 @@ def navigate_to_payslip_page(driver):
         # 給与明細ページのリンクを探す
         print("給与明細ページを探しています...")
         
-        # 一般的な給与明細ページへのリンクパターンを試す
-        possible_links = [
-            "給与明細",
-            "給与",
-            "明細",
-            "payslip",
-            "salary",
-            "pay"
-        ]
+        # キューブボタンから給与明細ページへのリンクを踏む
+        possible_links = ['//*[@id="js-cm-ptl-portalTabArea"]/div[1]/div[1]/div[1]/button',
+                          '//*[@id="js-cm-ptl-serviceListPanel"]/div/a[1]/img']
         
         found_link = False
         
@@ -139,6 +135,8 @@ def navigate_to_payslip_page(driver):
                 if links:
                     print(f"'{link_text}'リンクを発見してクリック")
                     links[0].click()
+                    time.sleep(3)
+                    links[1].click()
                     time.sleep(3)
                     found_link = True
                     break
@@ -295,15 +293,55 @@ def download_top_payslip(driver, download_path):
         print(f"❌ ダウンロードエラー: {e}")
         return False
 
+# ダウンロード後の処理を追加
+def move_and_rename_file(download_path, target_path, year):
+    """
+    最新のダウンロードファイルを <target_path>/<year>/ に移動し、
+    yyyymm へリネーム。ファイル名が末尾 "S.pdf" のときは "yyyymm賞与.pdf" にする。
+    例:
+      202506S.pdf -> 202506賞与.pdf
+      202507.pdf  -> 202507.pdf
+      202507K.pdf -> 202507.pdf
+    """
+    os.makedirs(target_path, exist_ok=True)
+
+    # .crdownload を除外した最新ファイルを特定
+    files = [f for f in os.listdir(download_path) if not f.endswith(".crdownload")]
+    if not files:
+        print("❌ 移動対象ファイルが見つかりません")
+        return False
+
+    latest_file = max([os.path.join(download_path, f) for f in files], key=os.path.getctime)
+    filename = os.path.basename(latest_file)
+    ext = os.path.splitext(filename)[1]          # 例: ".pdf"
+    name_upper = filename.upper()                # 大文字化して安全に比較
+
+    # yyyymm と year は保存名/保存先用（ダウンロード日ベース）
+    yyyymm = datetime.now().strftime("%Y%m")
+
+    # ファイル名末尾が "S.pdf" なら賞与
+    if name_upper.endswith("S.PDF"):
+        new_filename = f"{yyyymm}賞与{ext}"
+    else:
+        new_filename = f"{yyyymm}{ext}"
+
+    save_dir = os.path.join(target_path, year)
+    os.makedirs(save_dir, exist_ok=True)
+
+    new_path = os.path.join(save_dir, new_filename)
+    shutil.move(latest_file, new_path)
+    print(f"✅ ファイルを移動＆リネームしました: {new_path}")
+    return True
+
 def main():
     """メイン処理"""
     
     print("=== OBC給与明細ダウンロード ===")
+    year = datetime.now().strftime("%Y")
     
     # ダウンロード設定付きでブラウザを起動
     driver, download_path = setup_download_preferences()
-    print(f"ダウンロードフォルダ: {download_path}")
-    
+        
     try:
         # ログイン
         if not login_to_obc(driver):
@@ -316,17 +354,17 @@ def main():
         
         # トップの給与明細をダウンロード
         if download_top_payslip(driver, download_path):
+            move_and_rename_file(download_path, D_PATH, year)
             print("✅ 処理完了")
         else:
             print("❌ ダウンロードに失敗しました")
         
-        print(f"\nダウンロードフォルダを確認してください: {download_path}")
+        print(f"\nダウンロードフォルダを確認してください: {download_path + year}")
         
     except Exception as e:
         print(f"❌ 予期しないエラー: {e}")
     
     finally:
-        input("Enterキーを押すとブラウザを閉じます...")
         driver.quit()
 
 if __name__ == "__main__":

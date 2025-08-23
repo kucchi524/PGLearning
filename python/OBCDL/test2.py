@@ -169,9 +169,9 @@ def move_and_rename_file(download_path, target_path):
     最新のダウンロードファイルを <target_path>/<year>/ に移動し、
     yyyymm へリネーム。ファイル名が末尾 "S.pdf" のときは "yyyymm賞与.pdf" にする。
     例:
-      (000472)202506S.pdf -> 202506賞与.pdf
-      (000472)202507.pdf  -> 202507.pdf
-      (000472)202507K.pdf -> 202507.pdf
+      202506S.pdf -> 202506賞与.pdf
+      202507.pdf  -> 202507.pdf
+      202507K.pdf -> 202507.pdf
     """
     os.makedirs(target_path, exist_ok=True)
 
